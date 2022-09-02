@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stud2.xsl"?>
+<!DOCTYPE student
+[
+<!ELEMENT stud3 (name,usn,college,department,address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT usn (#PCDATA)>
+<!ELEMENT college (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+]>
+<student>
+<stud3>
+<name>Ajith kumar</name>
+<usn>109</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>Rias gremary</name>
+<usn>110</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>Yuno gasai</name>
+<usn>108</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>Kitagawa Marin</name>
+<usn>107</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>Rem</name>
+<usn>112</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>Jinx</name>
+<usn>113</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>Sakurajima mai</name>
+<usn>106</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+<stud3>
+<name>koneko</name>
+<usn>114</usn>
+<college>RVCE</college>
+<department>MCA</department>
+<address>Bangalore</address>
+</stud3>
+
+</student>
