@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Table</title>
+<style>
+div{
+text-align:center;
+}
+
+input:hover{
+color:aqua;
+}
+table{
+ box-shadow:2px 2px 2px lightblue;
+ color:black;
+}
+td{
+color:purple;
+back-ground:lightblue;
+}
+th{
+color:blue;
+}
+</style>
+
+<script>
+ function studtable(){
+ var students=[
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                },
+                {
+                "stud_id":"109",
+                "stud_name":"Ajith",
+                "mobile":"800900",
+                "department":"Mca"
+                }
+]
+
+ var tableBody="<table border='1' align='center'><tr><th>student id</th><th>Name</th><th>mobile</th><th>department</th></tr>"
+
+ students.forEach(function(d)
+ {
+
+ tableBody+="<tr><td>"+d.stud_id+"</td><td>"+d.stud_name+"</td><td>"+d.mobile+"</td><td>"+d.department+"</td></tr>"
+
+ });
+
+ tableBody+="</table>";
+ var con=document.getElementById("showdata");
+ con.innerHTML=tableBody;
+}
+</script>
+</head>
+<body>
+<div>
+<input type="button" onclick='studtable()' value="TABLE">
+<p id="showdata"></p>
+</div>
+</body>
+</html>
