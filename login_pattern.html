@@ -1,0 +1,120 @@
+<!Doctype html>
+<html>
+<head>
+<title>login page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.panel{
+margin-top:1px;
+background-color:white;
+}
+.jumbotron{
+padding:35px;
+font-size:45PX;
+text-width:200px;
+background-color:lightblue;
+}
+#pan{
+box-shadow:5px 10px #888888;
+}
+#con{
+margin-top:35px;
+}
+</style>
+
+</head>
+<body>
+<div class="container-fluid" id="con">
+<div class="panel text-center" id="pan">
+<div class="panel heading">
+<center class="jumbotron">Login Page</center>
+</div>
+<div class="panel body">
+<form class="form"><b>
+Username</b><input type="text" placeholder="username" name="uid" required/>
+<br><br><b>
+password</b><input type="password" placeholder="password" name="pswd" required/>
+<br><br>
+</div>
+<div class="panel footer">
+<input type="button" onclick="check(this.form)" class="btn btn-primary" value="Login"/>
+<input type="reset" value="reset" class="btn btn-primary"/>
+<input type="checkbox" value=uid.value name="remember"/><b>Remember me</b><br><br>
+<input type="radio" value="admin" name="uname"/><b>admin</b>
+<input type="radio" value="user" name="uname"/><b>user</b>
+</div>
+</form>
+</div>
+</div>
+<script>
+var chk_user=/^1[A-ZA-Z0-90-9A-ZA-ZA-Z0-90-90-9]{10,}$/;
+var chk_password=/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+function check(form)
+{
+ var user_id =form.uid.value;
+ var password_id =form.pswd.value;
+ var uuid =String(user_id);
+ arr=["1RV21MCA109","1RV21MCA110","1RV21MCA109"];
+ arru=["1RV21MCA115","1RV21MCA116","1RV21MCA117"];
+if("admin"==form.uname.value)
+{
+ if(arr.some(value => value ==uuid))
+ {
+ if((chk_user.test(user_id))&&(chk_password.test(password_id)))
+ {
+        alert("Welcome Admin");
+        document.write(Date()+" Welcome "+user_id);
+        var x=Math.floor(Math.random()*266);
+        var y=Math.floor(Math.random()*266);
+        var z=Math.floor(Math.random()*266);
+        var bcolor="rgb("+x+","+y+","+z+")";
+        document.body.bgColor=bcolor;
+        document.write("<hr>")
+        document.write("<table><tr><td>user<td></tr><tr><td>1RV21MCA115</td></tr><tr><td>1RV21MCA116</td></tr><tr><td>1RV21MCA117</td></tr></table>");
+        document.write("<hr>")
+}
+ else
+ {
+        alert("Incorrect userid or password");
+ }
+ }
+ else
+ {
+    alert("You are not an admin");
+ }
+ }
+else if("user"==form.uname.value)
+{
+if(arru.some(value => value ==uuid))
+{
+if((chk_user.test(user_id))&&(chk_password.test(password_id)))
+ {
+        alert("You have logged in");
+        document.write(location.href = "login.html");
+        document.write(Date()+" Welcome "+user_id);
+        var x=Math.floor(Math.random()*266);
+        var y=Math.floor(Math.random()*266);
+        var z=Math.floor(Math.random()*266);
+        var bcolor="rgb("+x+","+y+","+z+")";
+        document.body.bgColor=bcolor;
+ }
+ else
+ {
+        alert("Incorrect userid or password");
+ }
+}
+else
+{
+ alert("You are not an USER");
+}
+}
+else
+{
+ alert("Select login type");
+}
+}
+</script>
+</body>
+</html>
